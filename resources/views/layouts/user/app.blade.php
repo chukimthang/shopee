@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <meta name="_token" content="{{ csrf_token() }}">
 
-    <title>@lang('frontend.ishopee')</title>
+    <title>@lang('user.ishopee')</title>
 
     {{ Html::style('css/app.css') }}
     {{ Html::style('bower_components/bootstrap/dist/css/bootstrap.min.css') }}

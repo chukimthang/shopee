@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>@lang('text.admin_title')</title>
+    <meta name="_token" content="{{ csrf_token() }}">
+    
+    <title>@lang('text.ishopee')</title>
+    
     {!! Html::style('css/app.css') !!}
     {!! Html::script('js/app.js') !!}
     <link href="{{ asset('admin/css/admin.css') }}" rel="stylesheet">
-    <script src="{{ asset('admin/js/admin.js') }}"></script>
-    <link href="{{ asset('font-awesome/css/font-awesome.css') }}" rel="stylesheet">
-    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <script src="{{ asset('metisMenu/dist/metisMenu.min.js') }}"></script>
     {{ Html::style('/bower_components/bootstrap/dist/css/bootstrap.min.css') }}
     {{ Html::style('/bower_components/font-awesome/css/font-awesome.min.css') }}
     {{ Html::script('/bower_components/jquery/dist/jquery.min.js') }}

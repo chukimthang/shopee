@@ -140,21 +140,25 @@ select.selectmenu {
 }
 
 section.callaction {
-    background:#f9f9f9;
-    padding:50px 0 0 0;
+    background: #f9f9f9;
+    padding: 50px 0 0 0;
 }
 
 /* --- content --- */
 
 #content {
-    position:relative;
-    background:#fff;
-    padding:50px 0 40px 0;
+    position: relative;
+    background: #fff;
+    padding: 30px 0 30px 0;
 }
 
 #content img {
-    max-width:100%;
+    max-width: 100%;
     height:auto;
+}
+
+.container .row {
+    margin-bottom: 10px;
 }
 
 /* --- box --- */
@@ -165,11 +169,19 @@ section.callaction {
 }
 .box-gray  {
     background: #f8f8f8;
-    padding: 10px 10px;
+    padding: 4px 5px;
 }
+
 .box-gray  h4,.box-gray  i {
     margin-bottom: 5px;
 }
+
+.box-gray .price {
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: #ff5722;
+}
+
 .box-bottom {
     padding: 5px 20px;
     text-align: center;
@@ -183,7 +195,6 @@ section.callaction {
 .box .icon img {
     width: 220px;
     height: auto;
-    margin-left: 10px;
     margin-top: 5px;
 }
 
@@ -196,7 +207,7 @@ section.callaction {
 }
 
 h4.heading {
-    color: #68A4C4;
+    color: #ff5722;
 }
 
 /* --- footer --- */
