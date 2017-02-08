@@ -428,3 +428,16 @@ table.dataTable thead .sorting:after {
 .progress-bar.progress-bar-striped.active {
     width: 0%;
 }
+
+.form-group.add-category {
+    padding: 2px 80px;
+}
+
+.form-group.edit-category {
+    padding: 2px 80px;
+}
+
+.form-error {
+    margin: 10px 80px;
+    color: red;
+}

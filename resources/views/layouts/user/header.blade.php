@@ -13,10 +13,10 @@
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">@lang('frontend.home')</a></li>
-                    <li><a href="#">@lang('frontend.list_shop')</a></li>
-                    <li><a href="#">@lang('frontend.product')</a></li>
-                    <li><a href="#">@lang('frontend.login')</a></li>
+                    <li><a href="#">@lang('user.home')</a></li>
+                    <li><a href="#">@lang('user.list_shop')</a></li>
+                    <li><a href="#">@lang('user.product')</a></li>
+                    <li><a href="#">@lang('user.login')</a></li>
                 </ul>
             </div>
         </div>

@@ -1,16 +1,29 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
-
 Route::get('/', function () {
     return view('user/home/home');
+});
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function() {
+    Route::resource('category', 'CategoryController', ['only' => 'index']);
+
+    Route::post('category/addAjax', [
+        'as' => 'category.addAjax', 
+        'uses' => 'CategoryController@postAddAjax'
+    ]);
+
+    Route::post('category/updateAjax', [
+        'as' => 'category.updateAjax',
+        'uses' => 'CategoryController@postUpdateAjax'
+    ]);
+
+    Route::post('category/deleteAjax', [
+        'as' => 'category.deleteAjax',
+        'uses' => 'CategoryController@postDeleteAjax'
+    ]);
+
+    Route::get('category/search', [
+        'as' => 'category.search',
+        'uses' => 'CategoryController@search'
+    ]);
 });
