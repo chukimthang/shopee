@@ -4,7 +4,9 @@ Route::get('/', function () {
     return view('user/home/home');
 });
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function() {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.',
+    'middleware' => ['auth', 'admin']], function() {
+        
     Route::resource('category', 'CategoryController', ['only' => 'index']);
 
     Route::post('category/addAjax', [
@@ -27,3 +29,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
         'uses' => 'CategoryController@search'
     ]);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
