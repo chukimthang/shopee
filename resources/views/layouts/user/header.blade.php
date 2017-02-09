@@ -16,7 +16,7 @@
                     <li><a href="#">@lang('user.home')</a></li>
                     <li><a href="#">@lang('user.list_shop')</a></li>
                     <li><a href="#">@lang('user.product')</a></li>
-                    <li><a href="#">@lang('user.login')</a></li>
+                    <li><a href="{!! route('login') !!}">@lang('user.login')</a></li>
                 </ul>
             </div>
         </div>
