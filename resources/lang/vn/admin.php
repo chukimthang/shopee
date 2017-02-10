@@ -8,6 +8,12 @@ return [
     'delete' => 'Xóa',
     'close' => 'Thoát',
     'category' => 'Chuyên mục',
+    'user' => 'Tài khoản',
+    'email' => 'Email',
+    'phone' => 'Số điện thoại',
+    'detail' => 'Chi tiết',
+    'info_user' => 'Thông tin tài khoản',
+    'avatar' => 'Ảnh đại diện',
 
     'label' => [
         'index' => 'STT',

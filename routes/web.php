@@ -28,6 +28,18 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.',
         'as' => 'category.search',
         'uses' => 'CategoryController@search'
     ]);
+
+    Route::resource('user', 'UserController', ['only' => 'index']);
+
+    Route::post('user/deleteAjax', [
+        'as' => 'user.deleteAjax',
+        'uses' => 'UserController@postDeleteAjax'
+    ]);
+
+    Route::get('user/search', [
+        'as' => 'user.search',
+        'uses' => 'UserController@search'
+    ]);
 });
 
 Auth::routes();
