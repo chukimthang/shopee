@@ -441,3 +441,19 @@ table.dataTable thead .sorting:after {
     margin: 10px 80px;
     color: red;
 }
+
+.title-detail {
+    color: #337ab7;
+}
+
+.table-detail {
+    margin-left: 25%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.table-detail tr td {
+    height: 40px;
+}

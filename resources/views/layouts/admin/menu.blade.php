@@ -6,6 +6,11 @@
                     @lang('admin.category')
                 </a>
             </li>
+            <li>
+                <a href="{!! route('admin.user.index') !!}">
+                    @lang('admin.user')
+                </a>
+            </li>
         </ul>
     </div>
 </div>
