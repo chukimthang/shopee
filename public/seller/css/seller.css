@@ -172,3 +172,24 @@ ul.option-shop li:hover {
 ul.nav.navbar-nav li:hover {
     background: #710909;
 }
+
+.title {
+    color: #337ab7;
+}
+
+.colum {
+    text-align: center;
+}
+
+.modal-body.form {
+    padding: 20px 30px 30px 30px;
+}
+
+.modal-footer.form {
+    margin-right: 20px;
+}
+
+.form-error {
+    margin-top: 10px;
+    color: red;
+}

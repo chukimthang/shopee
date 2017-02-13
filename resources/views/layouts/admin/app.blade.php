@@ -10,13 +10,11 @@
     
     <title>@lang('text.ishopee')</title>
     
-    {!! Html::style('css/app.css') !!}
-    {!! Html::script('js/app.js') !!}
-    <link href="{{ asset('admin/css/admin.css') }}" rel="stylesheet">
-    {{ Html::style('/bower_components/bootstrap/dist/css/bootstrap.min.css') }}
-    {{ Html::style('/bower_components/font-awesome/css/font-awesome.min.css') }}
-    {{ Html::script('/bower_components/jquery/dist/jquery.min.js') }}
-    {{ Html::script('/bower_components/bootstrap/dist/js/bootstrap.min.js') }}
+    {{ Html::style('admin/css/admin.css') }}
+    {{ Html::style('bower_components/bootstrap/dist/css/bootstrap.min.css') }}
+
+    {{ Html::script('bower_components/jquery/dist/jquery.min.js') }}
+    {{ Html::script('bower_components/bootstrap/dist/js/bootstrap.min.js') }}
 </head>
 <body>
     <div id="wrapper">
