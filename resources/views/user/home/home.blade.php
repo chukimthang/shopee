@@ -1,6 +1,7 @@
 @extends('layouts.user.app')
 
 @section('content')
+@include('layouts.user.slide')
 <section id="content">
     <div class="container">
         <div class="row">

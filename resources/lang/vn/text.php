@@ -5,6 +5,8 @@ return [
     'home' => 'Trang chủ',
     'ishopee' => 'Ishopee',
     'search' => 'Tìm kiếm',
+    'danger' => 'danger',
+    'success' => 'success',
     'auth' => [
         'register' => 'Đăng kí',
         'login' => 'Đăng nhập',

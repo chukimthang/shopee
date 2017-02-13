@@ -27,7 +27,7 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{!! route('home') !!}">
                         @lang('text.ishopee')
                     </a>
                 </div>

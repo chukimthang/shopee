@@ -12,7 +12,7 @@
 
     {{ Html::style('css/app.css') }}
     {{ Html::style('bower_components/bootstrap/dist/css/bootstrap.min.css') }}
-    {{ Html::style('user/css/user.css') }}
+    {{ Html::style('seller/css/seller.css') }}
 
     {{ Html::script('js/app.js') }}
     {{ Html::script('bower_components/bootstrap/dist/js/bootstrap.min.js') }}
@@ -20,9 +20,8 @@
 </head>
 <body>
     <div id="wrapper">
-        @include('layouts.user.header')
+        @include('layouts.seller.header')
         @yield('content')
-        @include('layouts.user.footer')
     </div>
 </body>
 </html>
