@@ -7,12 +7,14 @@ use App\Like;
 use App\User;
 use App\Category;
 use App\Product;
+use App\Collection;
 
 class Shop extends Model
 {
     protected $table = 'shops';
 
-    protected $fillable ['name', 'address', 'status', 'category_id', 'user_id'];
+    protected $fillable = ['name', 'address', 'status', 'description',
+        'category_id', 'user_id'];
 
     public function likes()
     {
@@ -32,5 +34,10 @@ class Shop extends Model
     public function products()
     {
         return $this->hasMany(Product::class);
+    }
+
+    public function collections()
+    {
+        return $this->hasMany(Collection::class);
     }
 }

@@ -1,8 +1,6 @@
 <?php
 
-Route::get('/', function () {
-    return view('user/home/home');
-});
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.',
     'middleware' => ['auth', 'admin']], function() {
@@ -40,6 +38,18 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.',
         'as' => 'user.search',
         'uses' => 'UserController@search'
     ]);
+});
+
+Route::group(['prefix' => 'user', 'namespace' => 'User', 'as' => 'user.',
+    'middleware' => 'auth'], function() {
+
+    Route::resource('shop', 'ShopController', ['only' => ['create', 'store']]);
+});
+
+Route::group(['prefix' => 'seller', 'namespace' => 'Seller', 'as' => 'seller.', 
+    'middleware' => ['auth', 'seller']], function() {
+
+    Route::resource('home', 'HomeController', ['only' => 'index']);
 });
 
 Auth::routes();

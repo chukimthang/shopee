@@ -210,6 +210,17 @@ h4.heading {
     color: #ff5722;
 }
 
+.content-create-shop {
+    position: relative;
+    background: #fcfcfc;
+    margin: 0% 7% 2% 7%;
+}
+
+.content-create-shop h2 {
+    color: #68A4C4;
+    padding-top: 20px;
+}
+
 /* --- footer --- */
 
 footer .container {
