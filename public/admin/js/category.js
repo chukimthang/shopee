@@ -33,6 +33,7 @@ var category = function() {
 
                     $('#category-list').append(str);
                     alert(data.sms);
+                    $('.modal').modal('hide');
                 },
                 error: function(data) {
                     var errors = '';
@@ -66,6 +67,7 @@ var category = function() {
                 success: function (data) {
                     $('#category-name-' + dataId).html($('#nameEditCategory').val());
                     alert(data.sms);
+                    $('.modal').modal('hide');
                 },
                 error: function(data) {
                     var errors = '';

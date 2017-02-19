@@ -7,6 +7,7 @@ return [
     'search' => 'Tìm kiếm',
     'danger' => 'danger',
     'success' => 'success',
+    'close' => 'Đóng',
     'auth' => [
         'register' => 'Đăng kí',
         'login' => 'Đăng nhập',

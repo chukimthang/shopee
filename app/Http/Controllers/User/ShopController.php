@@ -23,9 +23,6 @@ class ShopController extends Controller
     public function store(ShopAddRequest $request)
     {
         $data = $request->only('name', 'address', 'category_id', 'description');
-        if (Auth::user()->shop->id) {
-            return redirect()->to('/');
-        }
         $data['status'] = 0;
         $data['user_id'] = Auth::user()->id;
         Shop::create($data);

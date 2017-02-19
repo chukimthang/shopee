@@ -50,6 +50,18 @@ Route::group(['prefix' => 'seller', 'namespace' => 'Seller', 'as' => 'seller.',
     'middleware' => ['auth', 'seller']], function() {
 
     Route::resource('home', 'HomeController', ['only' => 'index']);
+
+    Route::resource('collection', 'CollectionController', ['only' => ['index', 'store']]);
+
+    Route::post('collection/updateAjax', [
+        'as' => 'collection.updateAjax',
+        'uses' => 'CollectionController@postUpdateAjax'
+    ]);
+
+    Route::post('collection/deleteAjax', [
+        'as' => 'collection.deleteAjax',
+        'uses' => 'CollectionController@postDeleteAjax'
+    ]);
 });
 
 Auth::routes();
