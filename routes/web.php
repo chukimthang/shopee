@@ -46,12 +46,13 @@ Route::group(['prefix' => 'user', 'namespace' => 'User', 'as' => 'user.',
     Route::resource('shop', 'ShopController', ['only' => ['create', 'store']]);
 });
 
-Route::group(['prefix' => 'seller', 'namespace' => 'Seller', 'as' => 'seller.', 
+Route::group(['prefix' => 'seller', 'namespace' => 'Seller', 'as' => 'seller.',
     'middleware' => ['auth', 'seller']], function() {
 
     Route::resource('home', 'HomeController', ['only' => 'index']);
 
-    Route::resource('collection', 'CollectionController', ['only' => ['index', 'store']]);
+    Route::resource('collection', 'CollectionController',
+        ['only' => ['index', 'store']]);
 
     Route::post('collection/updateAjax', [
         'as' => 'collection.updateAjax',
@@ -61,6 +62,28 @@ Route::group(['prefix' => 'seller', 'namespace' => 'Seller', 'as' => 'seller.',
     Route::post('collection/deleteAjax', [
         'as' => 'collection.deleteAjax',
         'uses' => 'CollectionController@postDeleteAjax'
+    ]);
+
+    Route::resource('product', 'ProductController', ['only' => 'index']);
+
+    Route::post('product/uploadImage', [
+        'as' => 'product.uploadImage',
+        'uses' => 'ProductController@postUploadImage'
+    ]);
+
+    Route::post('product/addAjax', [
+        'as' => 'product.addAjax',
+        'uses' => 'ProductController@postAddAjax'
+    ]);
+
+    Route::post('product/updateAjax', [
+        'as' => 'product.updateAjax',
+        'uses' => 'ProductController@postUpdateAjax'
+    ]);
+
+    Route::post('product/deleteAjax', [
+        'as' => 'product.deleteAjax',
+        'uses' => 'ProductController@postDeleteAjax'
     ]);
 });
 

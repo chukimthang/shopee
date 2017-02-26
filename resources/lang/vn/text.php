@@ -8,6 +8,7 @@ return [
     'danger' => 'danger',
     'success' => 'success',
     'close' => 'Đóng',
+    'reset' => 'Làm sạch',
     'auth' => [
         'register' => 'Đăng kí',
         'login' => 'Đăng nhập',
