@@ -182,14 +182,34 @@ ul.nav.navbar-nav li:hover {
 }
 
 .modal-body.form {
-    padding: 20px 30px 30px 30px;
+    padding: 2% 10% 3% 10%;
 }
 
-.modal-footer.form {
-    margin-right: 20px;
+.modal-footer.form .btn-primary {
+    margin-right: 9%;
 }
 
 .form-error {
     margin-top: 10px;
     color: red;
+}
+
+.modal-body.form-product {
+    padding: 2% 20% 2% 20%;
+}
+
+.modal-footer.form-product .btn-primary {
+    margin-right: 20%;
+}
+
+#display-product {
+    margin-top: 3%;
+}
+
+#upload-product {
+    margin-top: 2%;
+}
+
+.form-error {
+    margin-bottom: 3%;
 }

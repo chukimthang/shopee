@@ -14,8 +14,21 @@ return [
     'delete' => 'Xóa',
     'index' => 'STT',
     'update' => 'Cập nhật',
+    'search' => 'Tìm kiếm',
+    'filter' => 'Lọc',
+    'code' => 'Mã',
+    'price' => 'Giá',
+    'quantity' => 'Số lượng',
+    'discount' => 'Chiết khấu (%)',
+    'description' => 'Mô tả',
+    'status' => 'Trạng thái',
+    'image' => 'Ảnh',
+
     'param' => [
         'edit' => 'Sửa :name',
+        'add' => 'Thêm :name',
+        'holder' => 'Mời Bạn Nhập :name',
+        'choose' => ' -- Mời Bạn Chọn :name'
     ],
     'message' => [
         'add_success' => 'Thêm thành công',
