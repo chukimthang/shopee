@@ -6,7 +6,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <h3 class="modal-title title" align="center">
-                    @lang('seller.param.edit', ['name' => 'chuyên mục'])
+                    @lang('seller.param.edit', ['name' => 'bộ sưu tập'])
                 </h3>
             </div>
 

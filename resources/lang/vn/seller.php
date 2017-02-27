@@ -3,7 +3,7 @@
 return [
     'welcome' => 'Chào mừng bạn đến với IShopee - Kênh người bán',
     'please_choose' => 'Mời bạn chọn danh mục',
-    'collection' => 'Chuyên mục',
+    'collection' => 'Bộ sưu tập',
     'product' => 'Sản phẩm',
     'order' => 'Đơn hàng',
     'show_shop' => 'Xem cửa hàng',
@@ -23,6 +23,8 @@ return [
     'description' => 'Mô tả',
     'status' => 'Trạng thái',
     'image' => 'Ảnh',
+    'shop' => 'Cửa hàng',
+    'category' => 'Chuyên mục',
 
     'param' => [
         'edit' => 'Sửa :name',
