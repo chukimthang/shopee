@@ -51,36 +51,16 @@ button.btn-search-home {
 .block-product-shop {
     background: #fff;
     padding: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 20%;
 }
 
 .block-product-shop .caption {
-    height: 150px;
+    height: 15%;
 }
 
 .block-product-shop .product-name-shop {
     padding-left: 10px;
-    height: 40px;
-}
-
-.block-product-shop .price-and-number {
-    margin-top: 15px;
-    padding-left: 10px;
-}
-
-.block-product-shop .price-and-number span.product-in-stock {
-    position: absolute;
-    right: 15px;
-}
-
-.block-product-shop .buy-and-comment {
-    margin-top: 15px;
-    padding-left: 10px
-}
-
-.block-product-shop .buy-and-comment .comment {
-    position: absolute;
-    right: 15px;
+    height: 14%;
 }
 
 .border-shadow-bottom.nav-header {
@@ -212,4 +192,12 @@ ul.nav.navbar-nav li:hover {
 
 .form-error {
     margin-bottom: 3%;
+}
+
+.block-product-shop .action {
+    margin-bottom: 5%;
+}
+
+.price h5 {
+    color: #ff5722;
 }

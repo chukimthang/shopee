@@ -12,12 +12,16 @@ use App\Product;
 use App\Image;
 use Validator;
 use Auth;
+use Lang;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        return view('seller.product.index');
+        $products = Product::listProduct(Auth::user()->shop->id)
+            ->paginate(config('myconfig.paginate_product'));
+
+        return view('seller.product.index', compact('products'));
     }
 
     public function postUploadImage(Request $request)
@@ -78,5 +82,17 @@ class ProductController extends Controller
         } catch (Exception $e) {
             DB::rollback();
         }
+    }
+
+    public function postDeleteAjax(Request $request)
+    {
+        $id = $request->id;
+        if (!$id) {
+            return response()->json(['sms' => Lang::get('seller.message.not_found')]);
+        }
+        $product = Product::find($id);
+        $product->delete();
+
+        return response()->json(['sms' => Lang::get('seller.message.delete_success')]);
     }
 }

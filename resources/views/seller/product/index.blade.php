@@ -10,7 +10,7 @@
                 <h4><a href="javascrip:void(0)" data-toggle="modal" 
                     data-target=".bs-example-modal-lg.create">
                     <span class="glyphicon glyphicon-plus-sign"></span>
-                    @lang("seller.param.add", ['name' => 'sản phẩm'])
+                    @lang("seller.add")
                 </a></h4>
             </div>
                
@@ -49,30 +49,53 @@
 
         <div class="col-lg-12">
             <div class="row">
-                <div class="col-md-3">
-                    <div class="col-sm-6 col-md-12 border-shadow-right-bottom block-product-shop">
-                        <a href="">
-                            <img src="http://www.w3schools.com/bootstrap/cinqueterre.jpg" width="100%" height="200">
-                        </a>
-                        <div class="caption">
-                            <div class="product-name-shop">
+                @if ($products)
+                    @foreach ($products as $product)
+                        <div class="col-md-3">
+                            <div class="col-sm-6 col-md-12 
+                                border-shadow-right-bottom 
+                                block-product-shop">
                                 <a href="">
-                                    <h4>San pham 1</h4>
+                                    <img src="{!! $product->images[0]->url !!}"
+                                        width="100%" height="220">
                                 </a>
-                            </div>
 
-                            <div class="price-and-number">
-                                <span>140.000 d</span>
-                                <span class="product-in-stock">Kho hàng 12
-                                    </span>
-                            </div>
-                            <div class="buy-and-comment">
-                                <span>Bán 0</span>
-                                <span class="comment">Binh luan 0</span>
+                                <div class="caption">
+                                    <div class="product-name-shop">
+                                        <a href="">
+                                            <h4 align="center">
+                                                {!! $product->name !!}
+                                            </h4>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="price">
+                                    <h5 align="center">
+                                        {!! number_format($product->price
+                                            ) !!} đồng
+                                    </h5>
+                                </div>
+                                
+                                <div class="action" align="center">
+                                    <a href="#" class="delete"
+                                        data-id="{!! $product->id !!}">
+                                        <span class="glyphicon glyphicon-trash"
+                                            aria-hidden="true">
+                                        </span>
+                                        @lang('seller.delete')
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                    @endforeach
+
+                    <div class="col-lg-12" align="center">
+                        {!! $products->render() !!}
                     </div>
-                </div>
+                @else
+                    <h2>@lang('seller.message.table_empty')</h2>
+                @endif
             </div>
         </div>
     </div>

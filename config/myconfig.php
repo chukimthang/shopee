@@ -2,6 +2,7 @@
 
 return [
     'paginate' => 5,
+    'paginate_product' => 16,
     'status' => [
         0 => 'Mới (nguyên tem, có mác)',
         1 => 'Mới (không tem, không mác)',

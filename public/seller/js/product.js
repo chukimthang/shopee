@@ -18,6 +18,7 @@ function product() {
     });
 
     current.add();
+    current.delete();
     current.reset();
   };
 
@@ -86,6 +87,24 @@ function product() {
           $('.form-error').show().html(errors);
         }
       })
+    });
+  };
+
+  this.delete = function () {
+    $('.delete').on('click', function () {
+      var dataId = $(this).data('id');
+      $.ajax({
+        url: '/seller/product/deleteAjax',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+          id: dataId
+        },
+        success: function(data) {
+          alert(data.sms);
+        }
+      });
+      $(this).parent().parent().remove();
     });
   };
 
