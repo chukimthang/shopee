@@ -55,7 +55,8 @@
                             <div class="col-sm-6 col-md-12 
                                 border-shadow-right-bottom 
                                 block-product-shop">
-                                <a href="">
+                                <a href="{!! route('seller.product.show', 
+                                    $product->id) !!}">
                                     <img src="{!! $product->images[0]->url !!}"
                                         width="100%" height="220">
                                 </a>

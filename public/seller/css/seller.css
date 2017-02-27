@@ -108,6 +108,10 @@ box-shadow: 0px 2px 5px 1px rgba(155, 155, 155, 0.9);
     border-radius: 20px; 
 }
 
+.nav.navbar-nav .navbar-brand {
+    font-size: 24px;
+}
+
 .navbar.navbar-inverse.border-radius-none {
     margin-bottom: 0px;
     background: #e7e7e7;

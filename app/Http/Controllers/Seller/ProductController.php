@@ -95,4 +95,17 @@ class ProductController extends Controller
 
         return response()->json(['sms' => Lang::get('seller.message.delete_success')]);
     }
+
+    public function show($id)
+    {
+        if (!$id) {
+            return redirect()->route('seller.product.index')->with([
+                'flash_level' => 'danger',
+                'flash_message' => Lang::get('seller.message.not_found')
+            ]);
+        }
+        $product = Product::find($id);
+
+        return view('seller.product.show', compact('product'));
+    }
 }
