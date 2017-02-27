@@ -34,6 +34,7 @@ return [
         'add_success' => 'Thêm thành công',
         'update_success' => 'Sửa thành công',
         'delete_success' => 'Xóa thành công',
-        'not_found' => 'Không tồn tại'
+        'not_found' => 'Không tồn tại',
+        'table_empty' => 'Không có dữ liệu trong bảng',
     ],
 ];

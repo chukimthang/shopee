@@ -12,6 +12,11 @@ class Collection extends Model
 
     protected $fillable = ['name', 'shop_id'];
 
+    public function scopeListCollection($query, $shopId)
+    {
+        return $query->where('shop_id', $shopId);
+    }
+
     public function shop()
     {
         return $this->belongsTo(Shop::class);

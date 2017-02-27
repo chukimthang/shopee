@@ -14,6 +14,11 @@ class Product extends Model
     protected $fillable = ['name', 'code', 'price', 'quantity', 'discount', 
         'point_rate', 'description', 'status', 'category_id', 'shop_id'];
 
+    public function scopeListProduct($query, $shopId)
+    {
+        return $query->where('shop_id', $shopId)->orderBy('id', 'desc');
+    }
+
     public function shop()
     {
         return $this->belongsTo(Shop::class);

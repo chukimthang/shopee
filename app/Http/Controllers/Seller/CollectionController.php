@@ -15,7 +15,9 @@ class CollectionController extends Controller
 {
     public function index()
     {
-        $collections = Collection::paginate(config('myconfig.paginate'));
+        $collections = Collection::listCollection(Auth::user()->shop->id)
+            ->paginate(config('myconfig.paginate'));
+            
         return view('seller.collection.index', compact('collections'));
     }
 
