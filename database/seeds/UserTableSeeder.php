@@ -11,6 +11,8 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker\Factory::create();
+
         DB::table('users')->insert([
             'name' => 'Chử Kim Thắng',
             'email' => 'chukimthang94@gmail.com',
@@ -25,7 +27,7 @@ class UserTableSeeder extends Seeder
             'email' => 'trinhhoa21081995@gmail.com',
             'password' => bcrypt('123456'),
             'phone' => '01646179365',
-            'avatar' => 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSWXoGSJC7rKeQjngG-7dfU03Aa7vZ9V0kcBPOuiFc0ltTMmUQg',
+            'avatar' => $faker->imageUrl(320, 320),
             'is_admin' => 0
         ]);
 
@@ -35,7 +37,7 @@ class UserTableSeeder extends Seeder
                 'email'  => str_random(10).'@gmail.com',
                 'password' => bcrypt('123456'),
                 'phone' => '0123456789',
-                'avatar' => 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSWXoGSJC7rKeQjngG-7dfU03Aa7vZ9V0kcBPOuiFc0ltTMmUQg',
+                'avatar' => $faker->imageUrl(320, 320),
                 'is_admin' => 0
             ]);
         }

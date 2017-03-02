@@ -34,7 +34,7 @@ class ShopsTableSeeder extends Seeder
                     $nbSentences = 50, 
                     $variableNbSentences = true
                 ),
-                'category_id' => $faker->numberBetween(1, 7),
+                'category_id' => $faker->numberBetween(1, 5),
                 'user_id' => $faker->numberBetween(2, 100),
             ]);
         }
