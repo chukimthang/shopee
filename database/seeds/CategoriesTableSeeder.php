@@ -17,8 +17,6 @@ class CategoriesTableSeeder extends Seeder
             'Nội thất',
             'Đồ điện gia dụng',
             'Thiết bị điện tử',
-            'Sách',
-            'Đồng hồ'
         ];
         for($i = 0; $i < count($category); $i++) {
             DB::table('categories')->insert([

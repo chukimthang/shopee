@@ -177,9 +177,13 @@ section.callaction {
 }
 
 .box-gray .price {
-    font-weight: bold;
-    margin-bottom: 0px;
+    font-weight: 100;
+    margin-top: 10px;
     color: #ff5722;
+}
+
+h4.product-name {
+    color: #68A4C4;
 }
 
 .box-bottom {
@@ -193,7 +197,7 @@ section.callaction {
 }
 
 .box .icon img {
-    width: 220px;
+    width: 100%;
     height: auto;
     margin-top: 5px;
 }
@@ -221,9 +225,22 @@ h4.heading {
     padding-top: 20px;
 }
 
+.btn-add-cart {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+}
+
+
 /* --- footer --- */
 
 footer .container {
     background: #68A4C4;
     height: 100px;
 }
+

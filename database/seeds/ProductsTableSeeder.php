@@ -45,7 +45,7 @@ class ProductsTableSeeder extends Seeder
                 'point_rate' => $faker->numberBetween(1, 5),
                 'description' => $faker->text(200),
                 'status' => $faker->numberBetween(1, 4),
-                'category_id' => $faker->numberBetween(1, 7),
+                'category_id' => $faker->numberBetween(1, 5),
                 'shop_id' => $faker->numberBetween(1, 100)
             ]);
         }
