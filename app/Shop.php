@@ -14,7 +14,7 @@ class Shop extends Model
     protected $table = 'shops';
 
     protected $fillable = ['name', 'address', 'status', 'description',
-        'category_id', 'user_id'];
+        'image', 'category_id', 'user_id'];
 
     public function likes()
     {
