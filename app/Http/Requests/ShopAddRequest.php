@@ -27,7 +27,8 @@ class ShopAddRequest extends FormRequest
             'name' => 'required',
             'address' => 'required',
             'category_id' => 'required|exists:categories,id',
-            'description' => 'required|min:10'
+            'description' => 'required|min:10',
+            'image' => 'required'
         ];
     }
 }

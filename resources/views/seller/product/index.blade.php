@@ -57,8 +57,11 @@
                                 block-product-shop">
                                 <a href="{!! route('seller.product.show', 
                                     $product->id) !!}">
-                                    <img src="{!! $product->images[0]->url !!}"
-                                        width="100%" height="220">
+                                    @if (isset($product->images[0]))
+                                        <img src="{!! $product->images[0]
+                                            ->url !!}"
+                                            width="100%" height="220">
+                                    @endif
                                 </a>
 
                                 <div class="caption">

@@ -19,6 +19,7 @@ class CreateShopsTable extends Migration
             $table->string('address');
             $table->boolean('status');
             $table->text('description');
+            $table->text('image');
             $table->integer('category_id')->unsigned();
             $table->integer('user_id')->unsigned();
 

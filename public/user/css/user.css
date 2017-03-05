@@ -177,7 +177,7 @@ section.callaction {
 }
 
 .box-gray .price {
-    font-weight: 100;
+    font-size: 16px;
     margin-top: 10px;
     color: #ff5722;
 }
@@ -229,13 +229,30 @@ h4.heading {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 3px 5px;
+    padding: 3% 5%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
 }
 
+#upload-shop {
+    margin-top: 2%;
+}
+
+.form-error {
+    color: red;
+}
+
+.block-shop {
+    background: #fff;
+    padding: 0px;
+    margin-bottom: 20%;
+}
+
+.title {
+    color: #337ab7;
+}
 
 /* --- footer --- */
 
@@ -243,4 +260,3 @@ footer .container {
     background: #68A4C4;
     height: 100px;
 }
-

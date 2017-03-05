@@ -43,7 +43,17 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.',
 Route::group(['prefix' => 'user', 'namespace' => 'User', 'as' => 'user.',
     'middleware' => 'auth'], function() {
 
-    Route::resource('shop', 'ShopController', ['only' => ['create', 'store']]);
+    Route::resource('shop', 'ShopController', ['only' => 'create']);
+
+    Route::post('shop/uploadImage', [
+        'as' => 'shop.uploadImage',
+        'uses' => 'ShopController@postUploadImage'
+    ]);
+
+    Route::post('shop/addAjax', [
+        'as' => 'shop.addAjax',
+        'uses' => 'ShopController@postAddAjax' 
+    ]);
 });
 
 Route::group(['prefix' => 'seller', 'namespace' => 'Seller', 'as' => 'seller.',
@@ -90,3 +100,5 @@ Route::group(['prefix' => 'seller', 'namespace' => 'Seller', 'as' => 'seller.',
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('shop', 'ShopController', ['only' => 'index']);

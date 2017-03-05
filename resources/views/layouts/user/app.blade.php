@@ -10,13 +10,11 @@
 
     <title>@lang('user.ishopee')</title>
 
-    {{ Html::style('css/app.css') }}
     {{ Html::style('bower_components/bootstrap/dist/css/bootstrap.min.css') }}
     {{ Html::style('user/css/user.css') }}
 
-    {{ Html::script('js/app.js') }}
-    {{ Html::script('bower_components/bootstrap/dist/js/bootstrap.min.js') }}
     {{ Html::script('bower_components/jquery/dist/jquery.min.js') }}
+    {{ Html::script('bower_components/bootstrap/dist/js/bootstrap.min.js') }}
 </head>
 <body>
     <div id="wrapper">

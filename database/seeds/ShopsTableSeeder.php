@@ -21,6 +21,7 @@ class ShopsTableSeeder extends Seeder
                 $nbSentences = 50, 
                 $variableNbSentences = true
             ),
+            'image' => $faker->imageUrl(320, 320),
             'category_id' => 2,
             'user_id' => 2
         ]);
@@ -34,6 +35,7 @@ class ShopsTableSeeder extends Seeder
                     $nbSentences = 50, 
                     $variableNbSentences = true
                 ),
+                'image' => $faker->imageUrl(320, 320),
                 'category_id' => $faker->numberBetween(1, 5),
                 'user_id' => $faker->numberBetween(2, 100),
             ]);

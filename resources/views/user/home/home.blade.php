@@ -30,7 +30,7 @@
                                     </div>
                                     <div class="box-bottom">
                                         <input product-id="56" class="button btn-add-cart"
-                                            value="Add Cart" type="button">
+                                            value="Mua ngay" type="button">
                                     </div>
                                 </div>
                             </div>
