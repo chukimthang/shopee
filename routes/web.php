@@ -74,7 +74,7 @@ Route::group(['prefix' => 'seller', 'namespace' => 'Seller', 'as' => 'seller.',
         'uses' => 'CollectionController@postDeleteAjax'
     ]);
 
-    Route::resource('product', 'ProductController', ['only' => ['index', 'show']]);
+    Route::resource('product', 'ProductController', ['only' => ['index']]);
 
     Route::post('product/uploadImage', [
         'as' => 'product.uploadImage',
@@ -94,6 +94,16 @@ Route::group(['prefix' => 'seller', 'namespace' => 'Seller', 'as' => 'seller.',
     Route::post('product/deleteAjax', [
         'as' => 'product.deleteAjax',
         'uses' => 'ProductController@postDeleteAjax'
+    ]);
+
+    Route::get('product/show/{id}', [
+        'as' => 'product.show',
+        'uses' => 'ProductController@show'
+    ]);
+
+    Route::get('product/search', [
+        'as' => 'product.search',
+        'uses' => 'ProductController@getSearch'
     ]);
 });
 

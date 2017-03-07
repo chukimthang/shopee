@@ -125,7 +125,7 @@
 @else
     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 border-shadow-bottom
         not-found-product">
-        @lang('product.not-found-product')
+        @lang('seller.message.not_found')
     </div>
 @endif
 @stop 

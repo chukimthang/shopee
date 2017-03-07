@@ -1,6 +1,7 @@
 function product() {
   var current = this;
   var dataImage = [];
+  var selected = [];
 
   this.init = function () {
     $.ajaxSetup({
@@ -61,6 +62,10 @@ function product() {
 
   this.add = function() {
     $('.form-product').on('click', '.btn-primary', function () {
+      selected = $(".form-group input:checkbox:checked").map(function(){
+        return $(this).data('id');
+      }).get();
+
       $.ajax({
         url: '/seller/product/addAjax',
         type: 'POST',
@@ -72,6 +77,7 @@ function product() {
           quantity: $('#quantity').val(),
           discount: $('#discount').val(),
           description: $('#description').val(),
+          collection_id: selected,
           status: $('#status').val(),
           image: dataImage
         },
