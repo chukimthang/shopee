@@ -19,6 +19,12 @@ class Product extends Model
         return $query->where('shop_id', $shopId)->orderBy('id', 'desc');
     }
 
+    public function scopeSearchByName($query, $name, $shopId)
+    {
+        return $query->where('name', 'like', '%' . $name . '%')
+            ->where('shop_id', $shopId);
+    }
+
     public function shop()
     {
         return $this->belongsTo(Shop::class);

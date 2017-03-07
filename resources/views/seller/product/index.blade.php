@@ -15,9 +15,10 @@
             </div>
                
             <div class="col-md-3 form-group">
-                {!! Form::open() !!}
+                {!! Form::open(['router' => 'seller.product.filter',
+                    'method' => 'GET']) !!}
                     <div class="col-md-10">
-                        {!! Form::select('filter',[], null, [
+                        {!! Form::select('filter', $selectCollection, null, [
                             'class' => 'form-control', 
                             'placeholder' => 'Tất cả',
                         ])!!}
@@ -25,16 +26,17 @@
                     
                     <div class="col-md-2">
                         {!! Form::submit(Lang::get('seller.filter'), 
-                            ['class' => 'btn btn-primary filter-player-admin'])
+                            ['class' => 'btn btn-primary'])
                         !!}
                     </div>
                 {!! Form::close() !!}
             </div>
 
             <div class="col-md-3 col-md-offset-3 form-group">
-                {!! Form::open() !!}
-                    {!! Form::text('search', null, [
-                        'id' => 'text-search-player',
+                {!! Form::open(['route' => 'seller.product.search',
+                    'method' => 'GET']) !!}
+                    {!! Form::text('search', isset($search) ? $search : null, [
+                        'id' => 'search',
                         'class' => 'form-control', 
                         'placeholder' => 'Search'
                     ]) !!}

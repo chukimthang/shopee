@@ -35,6 +35,13 @@ class ProductsTableSeeder extends Seeder
             ]);
         }
 
+        for($i = 0; $i < 50; $i++) {
+            DB::table('product_collections')->insert([
+                'product_id' => $faker->numberBetween(1, 50),
+                'collection_id' => $faker->numberBetween(1, 5)
+            ]);
+        }
+
         foreach (range(1,500) as $index) {
             DB::table('products')->insert([
                 'name' => rtrim($faker->text(15), '.'),
@@ -46,14 +53,21 @@ class ProductsTableSeeder extends Seeder
                 'description' => $faker->text(200),
                 'status' => $faker->numberBetween(1, 4),
                 'category_id' => $faker->numberBetween(1, 5),
-                'shop_id' => $faker->numberBetween(1, 100)
+                'shop_id' => $faker->numberBetween(2, 100)
             ]);
         }
 
         for ($i = 0; $i < 2000; $i++) { 
             DB::table('images')->insert([
                 'url' => $faker->imageUrl(320, 320),
-                'product_id' => $faker->numberBetween(1, 550)
+                'product_id' => $faker->numberBetween(51, 550)
+            ]);
+        }
+
+        for($i = 1; $i < 500; $i++) {
+            DB::table('product_collections')->insert([
+                'product_id' => $faker->numberBetween(51, 550),
+                'collection_id' => $faker->numberBetween(6, 305)
             ]);
         }
     }

@@ -10,6 +10,8 @@ use App\Http\Requests\ProductAddRequest;
 
 use App\Product;
 use App\Image;
+use App\Collection;
+use App\ProductCollection;
 use Validator;
 use Auth;
 use Lang;
@@ -20,8 +22,16 @@ class ProductController extends Controller
     {
         $products = Product::listProduct(Auth::user()->shop->id)
             ->paginate(config('myconfig.paginate_product'));
+        $collections = Collection::listCollection(Auth::user()->shop->id)
+            ->get();
+        $selectCollection = Collection::listCollection(Auth::user()->shop->id)
+            ->pluck('name', 'id');
 
-        return view('seller.product.index', compact('products'));
+        return view('seller.product.index', compact(
+            'products', 
+            'collections', 
+            'selectCollection'
+        ));
     }
 
     public function postUploadImage(Request $request)
@@ -59,7 +69,7 @@ class ProductController extends Controller
     public function postAddAjax(ProductAddRequest $request)
     {
         $data = $request->only('name', 'code', 'price', 'quantity', 'discount',
-            'description', 'status', 'image');
+            'description', 'status', 'image', 'collection_id');
         try {
             DB::beginTransaction();
             $data['shop_id'] =  Auth::user()->shop->id;
@@ -73,6 +83,15 @@ class ProductController extends Controller
             foreach ($data['image'] as $key => $value) {
                 $image = ['url' => $value, 'product_id' => $product->id];
                 Image::create($image);
+            }
+            if ($data['collection_id']) {
+                foreach ($data['collection_id'] as $key => $value) {
+                    $productCollection = [
+                        'product_id' => $product->id,
+                        'collection_id' => $value
+                    ];
+                    ProductCollection::create($productCollection);
+                }
             }
             DB::commit();
 
@@ -107,5 +126,23 @@ class ProductController extends Controller
         $product = Product::find($id);
 
         return view('seller.product.show', compact('product'));
+    }
+
+    public function getSearch(Request $request)
+    {
+        $search = $request->search;
+        $products = Product::searchByName($search, Auth::user()->shop->id)
+            ->paginate(config('myconfig.paginate_product'));
+        $selectCollection = Collection::listCollection(Auth::user()->shop->id)
+            ->pluck('name', 'id');
+        $collections = Collection::listCollection(Auth::user()->shop->id)
+            ->get();
+
+        return view('seller.product.index', compact(
+            'products', 
+            'collections', 
+            'selectCollection',
+            'search'
+        ));
     }
 }

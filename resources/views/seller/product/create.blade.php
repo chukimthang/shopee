@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('image', 'Image') !!}
+                    {!! Form::label('image', Lang::get('seller.image')) !!}
                     {!! Form::file('image', [
                         'id' => 'photo-product', 
                         'accept' => 'image/*'
@@ -86,8 +86,23 @@
                         'id' => 'upload-product',
                         'class' => 'btn btn-default'
                     ]) !!}
-                    <div id="process-product" style="display: none">Process...</div>
+                    <div id="process-product" style="display: none">
+                        Process...</div>
                     <p id="display-product"></p>
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('collection', 
+                        Lang::get('seller.collection')) 
+                    !!} 
+                    <br>
+                    @foreach ($collections as $key => $collection)
+                        <input id="collection-{!! $collection->id !!}" 
+                            name="collection-{!! $collection->id !!}"
+                            data-id={!! $collection->id !!}
+                            type="checkbox" />
+                            {!! $collection->name !!}
+                    @endforeach
                 </div>
 
                 <div class="form-group">

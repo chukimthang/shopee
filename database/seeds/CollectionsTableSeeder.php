@@ -13,17 +13,25 @@ class CollectionsTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        foreach (range(1,20) as $index) {
+        $collections = [
+            'Áo sơ mi',
+            'Áo phông',
+            'Quần bò',
+            'Quần âu',
+            'Áo vest',
+        ];
+
+        for($i = 0; $i < count($collections); $i++) {
             DB::table('collections')->insert([
-                'name' => rtrim($faker->text(15), '.'),
+                'name' => $collections[$i],
                 'shop_id' => 1
             ]);
         }
 
-        foreach (range(1,200) as $index) {
+        foreach (range(1,300) as $index) {
             DB::table('collections')->insert([
                 'name' => rtrim($faker->text(15), '.'),
-                'shop_id' => $faker->numberBetween(1, 100)
+                'shop_id' => $faker->numberBetween(2, 100)
             ]);
         }
     }
