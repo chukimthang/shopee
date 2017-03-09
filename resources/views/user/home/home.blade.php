@@ -15,7 +15,8 @@
                                     <div class="box-gray aligncenter">
                                         <h4 class="product-name">{!! $product->name !!}</h4>
                                         <div class="icon">
-                                            <a href="">
+                                            <a href="{!! route('product.show', 
+                                                $product->id) !!}">
                                                 @if (isset($product->images[0])
                                                     )
                                                     <img src="{!! $product

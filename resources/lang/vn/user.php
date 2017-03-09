@@ -21,4 +21,25 @@ return [
         'create_shop_success' => 'Tạo shop thành công',
     ],
     'create' => 'Tạo',
+    'addCart' => 'Thêm vào giỏ',
+
+    'product' => [
+        'availible' => 'Sản phẩm',
+        'following' => 'Đang theo dõi',
+        'follow' => 'Theo dõi',
+        'product' => 'Sản phẩm',
+        'like' => 'Thích',
+        'collection' => 'Bộ sưu tập',
+        'productDetail' => 'Chi tiết',
+        'comment' => 'Bình luận',
+        'vote' => 'Đánh giá',
+        'view_shop' => 'Xem Shop',
+        'count' => 'Số lượng',
+        'name' => 'Tên sản phẩm',
+        'generalInformation' => 'Thông tin chung',
+        'code' => 'Mã',
+        'price' => 'Giá',
+        'quantity' => 'Số lượng',
+        'description' => 'Mô tả'
+    ],
 ];

@@ -17,7 +17,14 @@
     "public/bower_components"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "eonasdan-bootstrap-datetimepicker": "^4.17.45"
+    "bootstrap-datepicker": "^1.6.4",
+    "bootstrap-star-rating": "^4.0.1",
+    "datatables.net-dt": "^1.10.13",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.43",
+    "jquery-timeago": "^1.5.3",
+    "parsleyjs": "^2.6.0",
+    "simplePagination.js": "jquery.simplePagination#*",
+    "stripe.js": "https://js.stripe.com/v2/",
+    "ckeditor": "#full/4.3.3"
   }
 }

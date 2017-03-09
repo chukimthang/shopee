@@ -110,9 +110,13 @@
     height: 45px;
 }
 
-.block-shop-info div.view-follow-shop-info div.view,
+.block-shop-info div.view-follow-shop-info div.view {
+    height: 45px;
+}
+
 .block-shop-info div.view-follow-shop-info div.follow {
     height: 45px;
+    width: 150px;
 }
 
 .block-product-similar img.image {
