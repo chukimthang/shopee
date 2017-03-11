@@ -111,6 +111,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::resource('shop', 'ShopController', ['only' => 'index']);
+Route::resource('shop', 'ShopController', ['only' => ['index', 'show']]);
 
 Route::resource('product', 'ProductController', ['only' => 'show']);

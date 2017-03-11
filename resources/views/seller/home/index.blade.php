@@ -34,8 +34,9 @@
             </div>
             
             <div class="col-xs-12 col-sm-12 col-md-3 col-ls-3" >
-                <a href=""><div class="block-categoty-shop four"></div></a>
-                <a href="">
+                <a href="{!! route('shop.show', Auth::user()->shop->id) !!}">
+                    <div class="block-categoty-shop four"></div></a>
+                <a href="{!! route('shop.show', Auth::user()->shop->id) !!}">
                     <div class="name-category-shop"><h4>@lang('seller.show_shop')</h4></div>
                 </a>
             </div>

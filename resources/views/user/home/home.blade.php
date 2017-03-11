@@ -13,7 +13,6 @@
                             <div class="col-lg-2">
                                 <div class="box">
                                     <div class="box-gray aligncenter">
-                                        <h4 class="product-name">{!! $product->name !!}</h4>
                                         <div class="icon">
                                             <a href="{!! route('product.show', 
                                                 $product->id) !!}">
@@ -25,6 +24,7 @@
                                                 @endif
                                             </a>
                                         </div>
+                                        <h4 class="product-name">{!! $product->name !!}</h4>
                                         <p class="price" align="center">
                                             {!! number_format($product->price) !!} đồng
                                         </p>

@@ -15,14 +15,20 @@ return [
     'name' => 'Tên',
     'address' => 'Địa chỉ',
     'description' => 'Mô tả',
+    'create' => 'Tạo',
+    'addCart' => 'Thêm vào giỏ',
+    'count-product' => 'Số sản phẩm',
+    'shop' => 'Shop',
+    'all_product' => 'Sản phẩm',
+    'collection' => 'Bộ sưu tập',
+
     'message' => [
         'holder' => 'Mời bạn nhập :name',
         'select' => '-- Mời bạn chọn :name',
         'create_shop_success' => 'Tạo shop thành công',
+        'not_found_shop' => 'Không tìm thấy shop',
     ],
-    'create' => 'Tạo',
-    'addCart' => 'Thêm vào giỏ',
-
+   
     'product' => [
         'availible' => 'Sản phẩm',
         'following' => 'Đang theo dõi',
