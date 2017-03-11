@@ -13,4 +13,14 @@ class ShopController extends Controller
 
         return view('shop.index', compact('shops'));
     }
+
+    public function show($id)
+    {
+        $shop = Shop::find($id);
+        if (!$shop) {
+            return redirect()->route('shop.index');
+        }
+        
+        return view('shop.show', compact('shop'));
+    }
 }

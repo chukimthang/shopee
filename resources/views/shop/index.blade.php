@@ -12,7 +12,7 @@
                         <div class="col-sm-6 col-md-12 
                             border-shadow-right-bottom 
                             block-shop">
-                            <a href="#">
+                            <a href="{!! route('shop.show', $shop->id) !!}">
                                 <img src="{!! $shop->image !!}"
                                     width="100%" height="220">
                             </a>
