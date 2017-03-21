@@ -54,6 +54,28 @@ Route::group(['prefix' => 'user', 'namespace' => 'User', 'as' => 'user.',
         'as' => 'shop.addAjax',
         'uses' => 'ShopController@postAddAjax' 
     ]);
+
+    Route::resource('cart', 'CartController', ['only' => 'index']);
+
+    Route::post('cart/addItem', [
+        'as' => 'cart.addItem',
+        'uses' => 'CartController@postAddItem'
+    ]);
+
+    Route::post('cart/deleteItem', [
+        'as' => 'cart.deleteItem',
+        'uses' => 'CartController@postDeleteItem'
+    ]);
+
+    Route::post('cart/upQuantity', [
+        'as' => 'cart.upQuantity',
+        'uses' => 'CartController@postUpQuantity'
+    ]);
+
+    Route::post('cart/downQuantity', [
+        'as' => 'cart.downQuantity',
+        'uses' => 'CartController@postDownQuantity'
+    ]);
 });
 
 Route::group(['prefix' => 'seller', 'namespace' => 'Seller', 'as' => 'seller.',

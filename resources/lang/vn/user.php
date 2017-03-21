@@ -21,12 +21,21 @@ return [
     'shop' => 'Shop',
     'all_product' => 'Sản phẩm',
     'collection' => 'Bộ sưu tập',
+    'cart' => 'Giỏ hàng',
+    'one_price' => 'Đơn giá (đồng)',
+    'sub_total' => 'Thành tiền (đồng)',
+    'index' => 'STT',
+    'delete' => 'Xóa',
+    'total' => 'Tổng cộng',
 
     'message' => [
         'holder' => 'Mời bạn nhập :name',
         'select' => '-- Mời bạn chọn :name',
         'create_shop_success' => 'Tạo shop thành công',
         'not_found_shop' => 'Không tìm thấy shop',
+        'not_product_cart' => 'Không có sản phẩm trong giỏ hàng của bạn',
+        'add_cart_success' => 'Thêm thành công sản phẩm vào giỏ hàng',
+        'not_found_product' => 'Không tìm thấy sản phẩm'
     ],
    
     'product' => [
@@ -46,6 +55,7 @@ return [
         'code' => 'Mã',
         'price' => 'Giá',
         'quantity' => 'Số lượng',
-        'description' => 'Mô tả'
+        'description' => 'Mô tả',
+        'image' => 'Ảnh'
     ],
 ];

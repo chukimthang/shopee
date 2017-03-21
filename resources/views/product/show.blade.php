@@ -81,7 +81,8 @@
                         <div class="block-price">
                             <div class="discount-price col-md-7 col-lg-7
                                 col-sm-7 col-xs-7">
-                                <h3>{{ number_format($product->price) }} đồng<h3>
+                                <h3>{{ number_format($product->price) }} 
+                                    đồng<h3>
                             </div>
                         </div>
 
@@ -104,10 +105,12 @@
                         </div>
 
                         <div class="add-product-in-cart">
-                            <input type="button" 
-                                class="btn-add-cart-product-detail" 
-                                data-id="{{ $product->id }}" 
-                                value="@lang('user.addCart')">
+                            <a href="javascript:void(0)" class="add-cart" 
+                                data-id="{{ $product->id }}">
+                                <input type="button" 
+                                    class="btn-add-cart-product-detail"
+                                    value="@lang('user.addCart')">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -131,7 +134,8 @@
                             <div class="view-follow-shop-info">
                                 <div class="col-md-6 col-lg-6 col-sm-6
                                     col-xs-6 row view">
-                                    <a href="#" 
+                                    <a href="{!! route('shop.show', 
+                                        $product->shop->id) !!}" 
                                         class="btn-button button4">
                                         @lang('user.product.view_shop')
                                     </a>
@@ -324,7 +328,7 @@
 @else
     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 
         border-shadow-bottom not-found-product">
-        @lang('product.not-found-product')
+        @lang('user.message.not_found_product')
     </div>
 @endif
 
@@ -332,10 +336,10 @@
 <script type="text/javascript" src="{{ asset('bower_components/jquery.easyPaginate/lib/jquery.easyPaginate.js') }}"></script>
 </script>
 <script type="text/javascript" src="{{ asset('user/js/plugin.js') }}"></script>
+<script type="text/javascript" src="{{ asset('user/js/cart.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/lang.js') }}"></script>
 <script type="text/javascript">
-  var plugin = new plugin();
-  plugin.init({
-    facebookId: {{ config('plugin.facebook-id') }}
-  });
+  var cart = new cart;
+  cart.init();
 </script>
 @stop

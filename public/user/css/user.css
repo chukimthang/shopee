@@ -273,6 +273,35 @@ h4.heading {
     color: #ff5722;
 }
 
+.glyphicon.glyphicon-shopping-cart {
+    font-size: 18px; 
+    color: #ff5722;
+}
+
+h3.cart-title {
+    color: #68A4C4;
+    margin-bottom: 20px;
+}
+
+.total-price {
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.total-price span {
+    color: red;
+}
+
+.cart .colum-head {
+    font-weight: bold;
+    text-align: center;
+}
+
+.cart-quantity {
+    font-size: 25px;
+    font-weight: bold;
+}
+
 /* --- footer --- */
 
 footer .container {
