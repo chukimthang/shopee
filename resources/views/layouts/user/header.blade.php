@@ -67,6 +67,12 @@
                                 </form>
                             </ul>
                         </li>
+                        <li>
+                            <a href="{!! route('user.cart.index') !!}">
+                                <span class="glyphicon glyphicon-shopping-cart" 
+                                    aria-hidden="true"></span>
+                            </a>
+                        </li>
                     @endif
                 </ul>
             </div>

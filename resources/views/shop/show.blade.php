@@ -128,8 +128,9 @@
                                         block-product-category 
                                         background-while">
                                         <div>
-                                            <a href="#" class="col-md-12
-                                                img-product">
+                                            <a href="{!! route('product.show', 
+                                                $product->id) !!}" 
+                                                class="col-md-12 img-product">
                                                 @if (count($product->images) >
                                                     0)
                                                     <img src="{{ asset($product
