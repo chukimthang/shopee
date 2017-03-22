@@ -27,6 +27,10 @@ return [
     'index' => 'STT',
     'delete' => 'Xóa',
     'total' => 'Tổng cộng',
+    'info_user' => 'Thông tin tài khoản',
+    'fullname' => 'Họ tên',
+    'auth' => 'Quyền',
+    'update_profile' => 'Thay đổi thông tin',
 
     'message' => [
         'holder' => 'Mời bạn nhập :name',

@@ -34,9 +34,11 @@
                                 {!! Auth::user()->name !!}
                                 <span class="caret"></span>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                            <ul class="dropdown-menu dropdown-menu-right" 
+                                role="menu">
                                 <li>
-                                    <a href="#">
+                                    <a href="{!! route('user.user.show', 
+                                        Auth::user()->id) !!}">
                                     @lang('user.profile')</a>
                                 </li>
                                 @if (Auth::user()->shop)

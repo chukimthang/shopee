@@ -5,6 +5,7 @@ return [
     'name' => 'Tên',
     'add' => 'Thêm',
     'edit' => 'Sửa',
+    'update' => 'Cập nhật',
     'delete' => 'Xóa',
     'close' => 'Thoát',
     'category' => 'Chuyên mục',
