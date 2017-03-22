@@ -76,6 +76,19 @@ Route::group(['prefix' => 'user', 'namespace' => 'User', 'as' => 'user.',
         'as' => 'cart.downQuantity',
         'uses' => 'CartController@postDownQuantity'
     ]);
+
+    Route::resource('user', 'UserController', 
+        ['only' => ['edit', 'show']]);
+
+    Route::post('user/updateAvatar', [
+        'as' => 'user.updateAvatar',
+        'uses' => 'UserController@postUpdateAvatar'
+    ]);
+
+    Route::post('user/update', [
+        'as' => 'user.update',
+        'uses' => 'UserController@update'
+    ]);
 });
 
 Route::group(['prefix' => 'seller', 'namespace' => 'Seller', 'as' => 'seller.',

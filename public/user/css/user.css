@@ -302,6 +302,31 @@ h3.cart-title {
     font-weight: bold;
 }
 
+h2.title.infor-user {
+    margin-left: 15%;
+}
+
+.profile {
+    margin-bottom: 30px;
+}
+
+.profile-edit a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.profile table th {
+    padding-left: 15%;
+}
+
+#display-avatar {
+    margin-top: 2%;
+}
+
+#upload-avatar {
+    margin-top: 2%;
+}
+
 /* --- footer --- */
 
 footer .container {

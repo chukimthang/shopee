@@ -10,4 +10,8 @@ return [
         2 => 'Đã sử dụng (mới 75%)',
         3 => 'Đã sử dụng (khác, xem thông tin chi tiết)',
     ],
+    'auth' => [
+        0 => 'Người dùng',
+        1 => 'Quản trị viên'
+    ]
 ];
